@@ -1,0 +1,222 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{5492BF6F-7EE8-4251-92D2-134B7017E26B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>CS1410_C__</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\CS1410 C++\v16\.suo" />
+    <None Include=".vs\CS1410 C++\v16\Browse.VC.db" />
+    <None Include="DynaArray.docx" />
+    <None Include="Employee..pdf" />
+    <None Include="Emplyee..pdf" />
+    <None Include="lab 01\lab 01\lab1\.vs\lab1\v14\.suo" />
+    <None Include="lab 01\lab 01\lab1\Debug\lab1.ilk" />
+    <None Include="lab 01\lab 01\lab1\ipch\LAB1-697ccf3a\LAB1-50745d4c.ipch" />
+    <None Include="lab 01\lab 01\lab1\lab1.VC.db" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.log" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.obj" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.pch" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.tlog\CL.command.1.tlog" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.tlog\CL.read.1.tlog" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.tlog\CL.write.1.tlog" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.tlog\lab1.lastbuildstate" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.tlog\link.command.1.tlog" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.tlog\link.read.1.tlog" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\lab1.tlog\link.write.1.tlog" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\stdafx.obj" />
+    <None Include="lab 01\lab 01\lab1\lab1\Debug\vc140.idb" />
+    <None Include="lab 01\lab 01\lab1\lab1\lab1.vcxproj" />
+    <None Include="lab02\lab02\lab02.cpp.o" />
+    <None Include="lab04\lab04\Rectangle.cpp.o" />
+    <None Include="lab13\lab13\driver.cpp.o" />
+    <None Include="lab5\lab5\Exception.cpp.o" />
+    <None Include="lab6\lab6\lab06.cpp.o" />
+    <None Include="lab7\lab7\lab7.cpp.o" />
+    <None Include="project1-1\project1\project1.cpp.o" />
+    <None Include="project2\project2\project02.cpp.o" />
+    <None Include="Project4-1\Project4\Employee.cpp.o" />
+    <None Include="project5\project5\driver" />
+    <None Include="project5\project5\employee" />
+    <None Include="project5\project5\Employee.o" />
+    <None Include="project6-1\project6\driver.o" />
+    <None Include="project6-1\project6\Employee.o" />
+    <None Include="project6-1\project6\HourlyEmployee.o" />
+    <None Include="project6-1\project6\o" />
+    <None Include="project6-1\project6\output" />
+    <None Include="project6-1\project6\payroll" />
+    <None Include="project6-1\project6\SalariedEmployee.o" />
+    <None Include="project7\project7\driver.o" />
+    <None Include="project8\dynArray.pdf" />
+    <None Include="project8\project8\driver.o" />
+    <None Include="project8\project8\DynArray.o" />
+    <None Include="project8\project8\output" />
+    <None Include="project9\project9\a.out" />
+    <None Include="project9\project9\output" />
+    <None Include="proj_12_KN_V1.0\lab09\.gitattributes" />
+    <None Include="proj_12_KN_V1.0\lab09\.gitignore" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\COMMIT_EDITMSG" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\config" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\description" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\FETCH_HEAD" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\HEAD" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\applypatch-msg.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\commit-msg.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\post-update.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\pre-applypatch.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\pre-commit.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\pre-merge-commit.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\pre-push.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\pre-rebase.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\pre-receive.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\hooks\update.sample" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\index" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\info\exclude" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\logs\HEAD" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\logs\refs\heads\master" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\logs\refs\remotes\origin\master" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\1a\f926167fe0ca686fce75277aa40e011c893bb9" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\1f\f0c423042b46cb1d617b81efb715defbe8054d" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\3f\16df7670a337b888659a8c9accbcb32cb6f679" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\79\8857779bbcfaaaf3f3bece8fde434a7e8aba7b" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\88\fa4027bda397de6bf19f0940e5dd6026c877f9" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\94\91a2fda28342ab358eaf234e1afe0c07a53d62" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\94\becbb3885eb7b322476b577cd3b507774cdc3c" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\96\87ba26a82d85d3c8c03a8e02a01582c92fe9e8" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\ac\2c99d3dd8aae3ab9f17ef5fc01c8255e0eda97" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\db\04d50e6ab213e15fb3984b199232bd35abe621" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\e9\2c217e29bbc65e13d2ef67a97f580feee28154" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\f0\d3a70ceaa69fb70811f58254dc738e0f939eac" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\objects\ff\08902246e7fe79aaf2f6aebda87212dd272810" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\refs\heads\master" />
+    <None Include="proj_12_KN_V1.0\lab09\.git\refs\remotes\origin\master" />
+    <None Include="proj_12_KN_V1.0\lab09\.vs\lab09\v14\.suo" />
+    <None Include="proj_12_KN_V1.0\lab09\.vs\lab09\v16\.suo" />
+    <None Include="proj_12_KN_V1.0\lab09\lab09\App.config" />
+    <None Include="proj_12_KN_V1.0\lab09\lab09\bin\Debug\lab09.exe.config" />
+    <None Include="proj_12_KN_V1.0\lab09\lab09\bin\Debug\lab09.vshost.exe.config" />
+    <None Include="proj_12_KN_V1.0\lab09\lab09\bin\Debug\lab09.vshost.exe.manifest" />
+    <None Include="proj_12_KN_V1.0\lab09\lab09\lab09.csproj" />
+    <None Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\lab09.csproj.AssemblyReference.cache" />
+    <None Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\lab09.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Employee-1.JPG" />
+    <Content Include="lab 01\lab 01\lab1\Debug\lab1.exe" />
+    <Content Include="lab 01\lab 01\lab1\Debug\lab1.pdb" />
+    <Content Include="lab 01\lab 01\lab1\lab1.sln" />
+    <Content Include="lab 01\lab 01\lab1\lab1\Debug\vc140.pdb" />
+    <Content Include="lab 01\lab 01\lab1\lab1\lab1.cpp" />
+    <Content Include="lab 01\lab 01\lab1\lab1\lab1.vcxproj.filters" />
+    <Content Include="lab 01\lab 01\lab1\lab1\ReadMe.txt" />
+    <Content Include="lab 01\lab 01\lab1\lab1\stdafx.cpp" />
+    <Content Include="lab 01\lab 01\lab1\lab1\stdafx.h" />
+    <Content Include="lab 01\lab 01\lab1\lab1\targetver.h" />
+    <Content Include="lab02\lab02\lab02.cpp" />
+    <Content Include="lab03.html" />
+    <Content Include="lab04\lab04\Rectangle.cpp" />
+    <Content Include="lab04\lab04\Rectangle.h" />
+    <Content Include="lab1.JPG" />
+    <Content Include="lab11\lab11\Fraction.h" />
+    <Content Include="lab13\lab13\driver.cpp" />
+    <Content Include="lab13\lab13\pair.h" />
+    <Content Include="lab5\lab5\Exception.cpp" />
+    <Content Include="lab6\lab6\lab06.cpp" />
+    <Content Include="lab6\lab6\lab06.h" />
+    <Content Include="lab6\lab6\voltages.txt" />
+    <Content Include="lab7\lab7\lab7.cpp" />
+    <Content Include="lab8\lab8\DynArray.h" />
+    <Content Include="project1-1\project1\project1.cpp" />
+    <Content Include="project2\project2\project02.cpp" />
+    <Content Include="Project4-1\Project4\Employee.cpp" />
+    <Content Include="Project4-1\Project4\Employee.h" />
+    <Content Include="project5\project5\driver.cpp" />
+    <Content Include="project5\project5\driver.h" />
+    <Content Include="project5\project5\Employee.cpp" />
+    <Content Include="project5\project5\Employee.h" />
+    <Content Include="project5\project5\test.cpp" />
+    <Content Include="project6-1\project6\driver.cpp" />
+    <Content Include="project6-1\project6\driver.h" />
+    <Content Include="project6-1\project6\Employee.cpp" />
+    <Content Include="project6-1\project6\Employee.h" />
+    <Content Include="project6-1\project6\HourlyEmployee.cpp" />
+    <Content Include="project6-1\project6\HourlyEmployee.h" />
+    <Content Include="project6-1\project6\SalariedEmployee.cpp" />
+    <Content Include="project6-1\project6\SalariedEmployee.h" />
+    <Content Include="project7\project7\driver.cpp" />
+    <Content Include="project7\project7\driver.h" />
+    <Content Include="project7\project7\Fraction.cpp" />
+    <Content Include="project7\project7\Fraction.h" />
+    <Content Include="project8\project8\driver.cpp" />
+    <Content Include="project8\project8\DynArray.cpp" />
+    <Content Include="project8\project8\DynArray.h" />
+    <Content Include="project9\project9\driver.cpp" />
+    <Content Include="project9\project9\DynArray.h" />
+    <Content Include="proj_12_KN_V1.0\lab09\.git\ms-persist.xml" />
+    <Content Include="proj_12_KN_V1.0\lab09\lab09.sln" />
+    <Content Include="proj_12_KN_V1.0\lab09\lab09\bin\Debug\lab09.exe" />
+    <Content Include="proj_12_KN_V1.0\lab09\lab09\bin\Debug\lab09.pdb" />
+    <Content Include="proj_12_KN_V1.0\lab09\lab09\bin\Debug\lab09.vshost.exe" />
+    <Content Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\lab09.csproj.FileListAbsolute.txt" />
+    <Content Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\lab09.exe" />
+    <Content Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\lab09.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs" />
+    <Compile Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="proj_12_KN_V1.0\lab09\lab09\Program.cs" />
+    <Compile Include="proj_12_KN_V1.0\lab09\lab09\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="proj_12_KN_V1.0\lab09\.git\objects\info\" />
+    <Folder Include="proj_12_KN_V1.0\lab09\.git\objects\pack\" />
+    <Folder Include="proj_12_KN_V1.0\lab09\.git\refs\tags\" />
+    <Folder Include="proj_12_KN_V1.0\lab09\lab09\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

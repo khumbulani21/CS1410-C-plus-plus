@@ -1,0 +1,235 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<title>CS 1410: Lab #3</title>
+<link rel="stylesheet" href="../../labs.css"/>
+</head>
+
+<body bgcolor=white background="../paper_b013.gif" lang=EN-US style='tab-interval:
+.5in;margin-left:7.5pt;margin-right:.5pt'>
+
+<div class=WordSection1>
+
+<table class=MsoNormalTable border=0 cellpadding=0 summary="" style='mso-cellspacing:
+ 1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:24.0pt 24.0pt 24.0pt 24.0pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+  style='mso-fareast-font-family:"Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td width=680 style='width:510.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <h1><span style='font-family:"Times New Roman","serif";mso-fareast-font-family:
+  "Times New Roman"'>CS 1410: Lab #3<o:p></o:p></span></h1>
+  <div class=MsoNormal align=center style='margin:0in;margin-bottom:.0001pt;
+  text-align:center'><span style='mso-fareast-font-family:"Times New Roman"'>
+  <hr size=2 width="100%" noshade style='color:darkblue' align=center>
+  </span></div>
+  <h3><span style='font-family:"Times New Roman","serif";mso-fareast-font-family:
+  "Times New Roman"'>Objectives:<o:p></o:p></span></h3>
+  <p><span style='font-family:"Times New Roman","serif"'>The objective of this
+  lab is to help you better understand the concept of recursion and use this
+  concept to solve a simple programming problem. <o:p></o:p></span></p>
+  <p><span style='font-family:"Times New Roman","serif"'>After completing this
+  lab, you should be able to <o:p></o:p></span></p>
+  <ol start=1 type=1>
+   <li class=MsoNormal style='color:black;mso-list:l1 level1 lfo1;tab-stops:
+       list .5in'><span style='mso-fareast-font-family:"Times New Roman"'>Explain
+       what recursion is and how it works. <o:p></o:p></span></li>
+   <li class=MsoNormal style='color:black;mso-list:l1 level1 lfo1;tab-stops:
+       list .5in'><span style='mso-fareast-font-family:"Times New Roman"'>Think
+       through a simple problem that involves recursion. <o:p></o:p></span></li>
+   <li class=MsoNormal style='color:black;mso-list:l1 level1 lfo1;tab-stops:
+       list .5in'><span style='mso-fareast-font-family:"Times New Roman"'>Write
+       programs that use recursion. <o:p></o:p></span></li>
+  </ol>
+  <h3><span style='font-family:"Times New Roman","serif";mso-fareast-font-family:
+  "Times New Roman"'>Study Material<o:p></o:p></span></h3>
+  <p><span style='font-family:"Times New Roman","serif"'>Review the slides on
+  Recursion. <o:p></o:p></span></p>
+  <h3><span style='font-family:"Times New Roman","serif";mso-fareast-font-family:
+  "Times New Roman"'>What is Recursion<o:p></o:p></span></h3>
+  <p><span style='font-family:"Times New Roman","serif"'>Simply stated, a
+  recursive function is a function that must call itself in order to solve a
+  problem. A recursive function must have the following properties: <o:p></o:p></span></p>
+  <ol start=1 type=1>
+   <li class=MsoNormal style='color:black;mso-list:l0 level1 lfo2;tab-stops:
+       list .5in'><span style='mso-fareast-font-family:"Times New Roman"'>The
+       function must have at least one base case that does what it is supposed
+       to do without needing to call itself. <o:p></o:p></span></li>
+   <li class=MsoNormal style='color:black;mso-list:l0 level1 lfo2;tab-stops:
+       list .5in'><span style='mso-fareast-font-family:"Times New Roman"'>The
+       function must have a recursive case, where the function calls itself in
+       order to accomplish what it is supposed to do. <o:p></o:p></span></li>
+   <li class=MsoNormal style='color:black;mso-list:l0 level1 lfo2;tab-stops:
+       list .5in'><span style='mso-fareast-font-family:"Times New Roman"'>There
+       must always be a way for the function to reach its base case. <o:p></o:p></span></li>
+  </ol>
+  <h3><span style='font-family:"Times New Roman","serif";mso-fareast-font-family:
+  "Times New Roman"'>Thinking Recursively<o:p></o:p></span></h3>
+  <p><span style='font-family:"Times New Roman","serif"'>The basic approach to
+  solving a problem recursively is to see if we can reduce the problem to one
+  that takes a simpler set of inputs. Most often this is a subset of the
+  original input. <o:p></o:p></span></p>
+  <p><span style='font-family:"Times New Roman","serif"'>Then, consider the
+  simplest possible subset of the original data. Figure out how you would solve
+  the problem for this simplest case. <i style='mso-bidi-font-style:normal'>Sometimes
+  there is more than one simplest case. </i><o:p></o:p></span></p>
+  <p><span style='font-family:"Times New Roman","serif"'>Now, combine this
+  simplest case with some calculation that creates a subset of the data passed
+  to the function and then calls itself, passing this subset of the original
+  data as the new parameter. <o:p></o:p></span></p>
+  <h3><span style='font-family:"Times New Roman","serif";mso-fareast-font-family:
+  "Times New Roman"'>Example<o:p></o:p></span></h3>
+  <p><span style='font-family:"Times New Roman","serif"'>Let's write a
+  recursive function that counts the number of characters in a string. Of
+  course, we could always just use the </span><span class=GramE><span
+  style='font-family:"Courier New"'>length(</span></span><span
+  style='font-family:"Courier New"'> )</span><span style='font-family:"Times New Roman","serif"'>
+  function built into the string class, but that would be cheating. So, let's
+  think about how to solve this problem recursively. <o:p></o:p></span></p>
+  <p><span style='font-family:"Times New Roman","serif"'>Using the steps above,
+  we know that we can always take a subset of a string using the <span
+  class=SpellE><span class=GramE><i>substr</i></span></span><span class=GramE><i>(</i></span><i>
+  )</i> function. For example, given the string <o:p></o:p></span></p>
+  <p class=code>&nbsp;&nbsp;&nbsp;string <span class=SpellE>str</span> =
+  &quot;apple&quot;; </p>
+  <p><span style='font-family:"Times New Roman","serif"'>we can create a string
+  that contains all of the characters except the first one by writing <o:p></o:p></span></p>
+  <p class=code><span style='font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;</span>string
+  <span class=SpellE>newStr</span> = <span class=SpellE>str.substr</span>(1); </p>
+  <p><span style='font-family:"Times New Roman","serif"'>This call creates a
+  substring that starts at position 1 (remember that the first character is at
+  location zero) of the original string and contains all of the remaining
+  characters in the original <span class=GramE>string .</span> So, in this
+  example, <span class=SpellE>newStr</span> would contain the string &quot;<span
+  class=SpellE><i>pple</i></span>&quot;. <o:p></o:p></span></p>
+  <p><span style='font-family:"Times New Roman","serif"'>That takes care of the
+  first step, being able to create a subset of the original data. <o:p></o:p></span></p>
+  <p><span style='font-family:"Times New Roman","serif"'>Now we need to figure
+  out what the base case is. Remember that we can't use the <span class=GramE><i>length(</i></span><i>
+  )</i> function. However, we can test the case where a string is empty. Of
+  course, when a string is empty, its length is zero. The code to make this
+  test and handle the base case would just be <o:p></o:p></span></p>
+  <p class=code>&nbsp;&nbsp;&nbsp;count = 0;<br>
+  &nbsp;&nbsp;&nbsp;if (<span class=SpellE>str</span> == &quot;&quot;)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return count;</p>
+  <p><span style='font-family:"Times New Roman","serif"'>Combining this with
+  the case where we take a subset of the data, we end up with the recursive
+  function <o:p></o:p></span></p>
+  <p class=code>&nbsp;&nbsp;&nbsp;<span class=SpellE>int</span> <span
+  class=SpellE>countChars</span>(String <span class=SpellE>str</span>)<br>
+  &nbsp;&nbsp;&nbsp;{<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=SpellE>int</span> count = 0;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (<span class=SpellE>str</span> ==
+  &quot;&quot;)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return count;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;<span
+  class=comment>// add a character to the count</span><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return count + <span
+  class=SpellE>countChars</span>(<span class=SpellE>str.substr</span>(1) );<span
+  class=comment>// function calls itself</span><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+  &nbsp;&nbsp;&nbsp;}</p>
+  <h3><span style='font-family:"Times New Roman","serif";mso-fareast-font-family:
+  "Times New Roman"'>Programming Exercise<o:p></o:p></span></h3>
+  <p><span style='font-family:"Times New Roman","serif"'>Using this thought
+  process, write a recursive function that counts the number of <i>a</i>'s in a
+  string. Your program should include a driver that asks the user for a string,
+  calls the recursive function, and outputs the number of <span class=GramE><i>a</i>'s</span>
+  it found in the string input by the user. <o:p></o:p></span></p>
+  <h3><span style='font-family:"Times New Roman","serif";mso-fareast-font-family:
+  "Times New Roman"'>Submitting Your Assignment<o:p></o:p></span></h3>
+  <p><span style='font-family:"Times New Roman","serif"'>After you are
+  satisfied that your program works correctly, place your project folder in a
+  zip file and submit it to Canvas as Lab #3. <o:p></o:p></span></p>
+  <h3><span style='font-family:"Times New Roman","serif";mso-fareast-font-family:
+  "Times New Roman"'>Grading<o:p></o:p></span></h3>
+  <table class=MsoNormalTable border=1 cellpadding=0 summary="grade sheet"
+   style='mso-cellspacing:1.5pt;border:outset 1.5pt;mso-yfti-tbllook:1184;
+   mso-padding-alt:3.75pt 3.75pt 3.75pt 3.75pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width=400 style='width:300.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><b><span
+    style='mso-fareast-font-family:"Times New Roman"'>Description</span></b><span
+    style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+    <td width=50 style='width:37.5pt;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><b><span
+    style='mso-fareast-font-family:"Times New Roman"'>Points possible</span></b><span
+    style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+    <td width=50 style='width:37.5pt;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><b><span
+    style='mso-fareast-font-family:"Times New Roman"'>Your points</span></b><span
+    style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1'>
+    <td width=400 style='width:300.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+    style='mso-fareast-font-family:"Times New Roman"'>Project meets submission
+    guidelines.
+    <ul>
+    <li>All source code files contain a complete file prologue <br>
+    <li>Source code files contain declaration that you did not copy code <br>
+    <li>Project has been properly submitted to Canvas <br>
+    <li>Code meets style guidelines<o:p></o:p></span></p>
+    </ul>
+    </td>
+    <td style='padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+    style='mso-fareast-font-family:"Times New Roman"'>2<o:p></o:p></span></p>
+    </td>
+    <td style='padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+    style='mso-fareast-font-family:"Times New Roman"'>&nbsp;<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:2'>
+    <td width=400 style='width:300.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+    style='mso-fareast-font-family:"Times New Roman"'>The program works
+    correctly. <o:p></o:p></span></p>
+    </td>
+    <td style='padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+    style='mso-fareast-font-family:"Times New Roman"'>3<o:p></o:p></span></p>
+    </td>
+    <td style='padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+    style='mso-fareast-font-family:"Times New Roman"'>&nbsp;<o:p></o:p></span></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+    <td style='padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+    style='mso-fareast-font-family:"Times New Roman"'>Total<o:p></o:p></span></p>
+    </td>
+    <td style='padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+    style='mso-fareast-font-family:"Times New Roman"'>5<o:p></o:p></span></p>
+    </td>
+    <td style='padding:3.75pt 3.75pt 3.75pt 3.75pt'>
+    <p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+    style='mso-fareast-font-family:"Times New Roman"'>&nbsp;<o:p></o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
